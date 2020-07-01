@@ -1,0 +1,10 @@
+FROM ubuntu:latest
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+COPY build-soar.sh /src/
+COPY soar-tcl-path.patch /src/
+
+WORKDIR /src
+
+RUN /bin/sh build-soar.sh

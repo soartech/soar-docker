@@ -1,0 +1,30 @@
+diff --git a/Core/ClientSMLSWIG/Tcl/SConscript b/Core/ClientSMLSWIG/Tcl/SConscript
+index 259a438a4..8f872ab54 100644
+--- a/Core/ClientSMLSWIG/Tcl/SConscript
++++ b/Core/ClientSMLSWIG/Tcl/SConscript
+@@ -54,8 +54,8 @@ else:
+     if tcl_user_platform_dir:
+          tcl_platform_dir = tcl_user_platform_dir
+ 
+-    tcl_libs = clone.Dir(os.path.join(tcl_platform_dir, 'lib'))
+-    tcl_headers = clone.Dir(os.path.join(tcl_platform_dir, 'include'))
++    tcl_libs = clone.Dir(os.path.join(tcl_platform_dir, 'lib/x86_64-linux-gnu'))
++    tcl_headers = clone.Dir(os.path.join(tcl_platform_dir, 'include/tcl8.6'))
+     tcl_bins = clone.Dir(os.path.join(tcl_platform_dir, 'bin'))
+     tcl_libname = 'libtcl8.6.so'
+     tcl_lib = 'tcl8.6'
+diff --git a/Tcl/SConscript b/Tcl/SConscript
+index 3133a2083..626b2ae5c 100644
+--- a/Tcl/SConscript
++++ b/Tcl/SConscript
+@@ -47,8 +47,8 @@ else:
+     if tcl_user_platform_dir:
+         tcl_platform_dir = tcl_user_platform_dir
+ 
+-    tcl_libs = clone.Dir(os.path.join(tcl_platform_dir, 'lib'))
+-    tcl_headers = clone.Dir(os.path.join(tcl_platform_dir, 'include'))
++    tcl_libs = clone.Dir(os.path.join(tcl_platform_dir, 'lib/x86_64-linux-gnu'))
++    tcl_headers = clone.Dir(os.path.join(tcl_platform_dir, 'include/tcl8.6'))
+     tcl_bins = clone.Dir(os.path.join(tcl_platform_dir, 'bin'))
+     tcl_libname = 'libtcl8.6.so'
+     tcl_lib = 'tcl8.6'

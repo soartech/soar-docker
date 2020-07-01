@@ -1,0 +1,16 @@
+# This Dockerfile will build a lightweight docker
+# environment containing Soar at /opt/soar.
+
+################################################
+#
+# PART 1: Build soar within a docker environment
+#
+
+FROM alpine:3.11
+
+COPY build-soar.sh /src/
+COPY musl-soar.patch /src/
+
+WORKDIR /src
+
+RUN /bin/sh build-soar.sh
